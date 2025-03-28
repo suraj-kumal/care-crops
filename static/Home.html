@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Care Crops</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
+    <script src="/config.js"></script>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="logo">
+        <a href="/"
+          ><img src="/static/logo-02.webp" alt="crop care" class="logo"
+        /></a>
+      </div>
+      <a href="/about" class="about">About</a>
+    </nav>
+    <div class="main">
+      <div class="container">
+        <form id="cropForm">
+          <h1 class="tit">Care Crops</h1>
+          <label for="crop_name" style="font-weight: 600">Choose crop:</label>
+          <select name="crop_name" id="crop_name">
+            <option value="" selected disabled hidden>Choose</option>
+            <option value="rice">Rice</option>
+            <option value="tomato">Tomato</option>
+            <option value="corn">Corn</option>
+          </select>
+          <br />
+          <div id="dropZone">Drag and drop an image here</div>
+          <span id="fileName"></span>
+          <input
+            type="file"
+            accept="image/*"
+            name="crop_image"
+            id="crop_image"
+            style="display: none"
+            required
+          />
+          <br />
+          <button type="submit">
+            <span class="material-icons">upload</span> Submit
+          </button>
+
+          <!-- Instructions after the button -->
+          <div id="instructions">
+            <p><strong>Instructions:</strong></p>
+            <ol>
+              <li>1. Select the crop type from the dropdown menu.</li>
+              <li>
+                2. Drag and drop an image or click to upload an image of the
+                selected crop.
+              </li>
+              <li>
+                3. After selecting the crop and uploading the image, click on
+                the "Submit" button.
+              </li>
+            </ol>
+          </div>
+        </form>
+
+        <div id="result">
+          <h3>Prediction Result:</h3>
+          <img id="uploadedImage" alt="Uploaded Crop Image" />
+          <p>
+            <strong>Crop Name:</strong>
+            <span id="resultCropName" style="text-transform: uppercase"></span>
+          </p>
+          <p>
+            <strong>Predicted Leaf Disease:</strong>
+            <span id="resultClass"></span>
+          </p>
+          <p>
+            <strong>Confidence:</strong> <span id="resultConfidence"></span>
+          </p>
+          <p><strong>Cause:</strong> <span id="resultCause"></span></p>
+          <h4>Recommended Solutions:</h4>
+
+          <ul id="solutionList"></ul>
+
+          <button id="resetButton">
+            <span class="material-icons" style="color: white">replay</span>
+            Diagnose Another Leaf
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CareCrops</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      header {
+        background-color: rgba(76, 175, 80, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        color: white;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+      }
+
+      main {
+        padding: 20px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #4caf50;
+      }
+
+      .home-button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #4caf50;
+        padding: 10px 20px;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .home-button:hover {
+        background-color: rgba(76, 175, 80, 0.8);
+        color: white;
+      }
+
+      .about-agriculture,
+      .featured-crops {
+        background-color: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      .about-agriculture h2 {
+        margin-top: 0;
+      }
+
+      .crop {
+        margin-bottom: 20px;
+      }
+
+      .crop h3 {
+        margin-top: 0;
+        color: #333;
+      }
+
+      .crop p {
+        margin: 0;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 20px;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      header {
+        background-color: rgba(76, 175, 80, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        color: white;
+        padding: 15px;
+        text-align: center;
+        position: relative;
+      }
+
+      main {
+        padding: 15px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #4caf50;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+        margin: 0 0 10px 0;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .home-button {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #4caf50;
+        padding: 8px 15px;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+        cursor: pointer;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      img.logo {
+        width: 100px;
+      }
+      .home-button:hover {
+        background-color: rgba(76, 175, 80, 0.8);
+        color: white;
+      }
+
+      .about-agriculture,
+      .featured-crops {
+        background-color: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+      }
+
+      .about-agriculture h2 {
+        margin-top: 0;
+      }
+
+      .crop {
+        margin-bottom: 15px;
+      }
+
+      .crop h3 {
+        margin-top: 0;
+        color: #333;
+      }
+
+      .crop p {
+        margin: 0;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 15px;
+        font-size: 14px;
+      }
+
+      /* Mobile-specific styles */
+      @media (max-width: 768px) {
+        header {
+          padding: 10px;
+        }
+
+        .home-button {
+          top: 10px;
+          right: 10px;
+          padding: 6px 12px;
+          font-size: 13px;
+        }
+
+        main {
+          padding: 10px;
+        }
+
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        h2 {
+          font-size: 1.3rem;
+        }
+
+        h3 {
+          font-size: 1.1rem;
+        }
+
+        p {
+          font-size: 15px;
+        }
+
+        .about-agriculture,
+        .featured-crops {
+          padding: 12px;
+          margin-bottom: 12px;
+        }
+      }
+
+      /* Small mobile devices */
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 1.3rem;
+          margin-bottom: 25px;
+        }
+
+        .home-button {
+          position: static;
+          display: block;
+          margin: 10px auto 0;
+          width: 80px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="/"
+          ><img src="/static/logo-02.webp" alt="crop care" class="logo"
+        /></a>
+      </div>
+
+      <a href="/" class="home-button">Home</a>
+    </header>
+
+    <main>
+      <div class="about-agriculture">
+        <h2>About Agriculture</h2>
+        <p>
+          Agriculture is the backbone of Nepal's economy, providing employment
+          to around 60% of the population and contributing approximately 25% to
+          the Gross Domestic Product (GDP). The country’s major crops include
+          rice, maize, wheat, millet, and barley, with rice being the staple
+          food. Additionally, Nepal cultivates cash crops such as tea, coffee,
+          sugarcane, jute, and cardamom, which contribute to the economy. Most
+          farmers rely on traditional farming methods, practicing subsistence
+          agriculture due to limited access to modern technology. Nepal's
+          diverse agro-climatic zones allow for the cultivation of a wide
+          variety of crops and support livestock farming, including cattle,
+          buffalo, goats, and poultry. However, the agricultural sector faces
+          challenges like small landholdings, lack of irrigation, low
+          productivity, and vulnerability to climate change. To address these
+          issues, the government and various organizations are promoting modern
+          farming techniques, organic agriculture, and agri-business
+          opportunities. Efforts are also being made to improve food security
+          and boost agricultural exports. With proper investments and policies,
+          Nepal has great potential to develop a more sustainable and productive
+          agricultural sector. Enhancing rural infrastructure and access to
+          financial support can further strengthen the livelihoods of Nepalese
+          farmers.
+        </p>
+      </div>
+
+      <div class="featured-crops">
+        <h2>Featured Crops</h2>
+        <div class="crop">
+          <h3>Rice</h3>
+          <p>
+            Rice is the most important staple crop in Nepal, primarily grown in
+            the Terai and hilly regions. It provides food security and income
+            for millions of farmers. However, rice production faces major
+            challenges due to leaf diseases such as bacterial leaf blight and
+            rice blast. These diseases cause leaf discoloration, weakening the
+            plant and reducing grain yield. Farmers struggle with lower
+            productivity and increased costs for disease management, which
+            affects their livelihood. Climate change and poor irrigation
+            facilities further aggravate the problem, making rice farming more
+            vulnerable.
+          </p>
+        </div>
+        <div class="crop">
+          <h3>Tomato</h3>
+          <p>
+            Tomatoes are widely cultivated in Nepal for both household
+            consumption and commercial purposes. They are an important vegetable
+            crop but are highly susceptible to leaf diseases such as early
+            blight, late blight, and tomato leaf curl virus. These diseases
+            cause leaf wilting, yellowing, and premature fruit drop, leading to
+            significant yield losses. Farmers often suffer from financial
+            setbacks as they need to spend more on pesticides and disease
+            control measures. The lack of awareness and access to resistant seed
+            varieties worsens the situation, affecting the income of small-scale
+            farmers.
+          </p>
+        </div>
+        <div class="crop">
+          <h3>Corn</h3>
+          <p>
+            Corn is another essential crop grown in Nepal, especially in the
+            mid-hills and Terai regions. It is a staple food and a source of
+            animal feed, supporting both food security and the livestock
+            industry. However, diseases like northern corn leaf blight and maize
+            rust severely impact corn production. These diseases lead to leaf
+            lesions, stunted growth, and poor grain quality, reducing overall
+            yield. Farmers face economic difficulties due to crop loss and
+            increased production costs for disease control. Without proper
+            disease management and improved agricultural practices, corn farming
+            remains at risk, affecting the livelihoods of many Nepalese farmers.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 CareCrops. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

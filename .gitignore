@@ -1,0 +1,23 @@
+# Python virtual environment
+infinityaura/
+.infinityaura/
+venv/
+.venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*$py.class
+*.so
+.Python
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# System files
+.DS_Store
+Thumbs.db
